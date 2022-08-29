@@ -15,12 +15,12 @@ function setup()
   createCanvas(windowWidth, windowHeight);
   for (let i = 0; i < ballCount; i++)
   {
-    x[i] = width / 2;           //Set x position to be the center
-    y[i] = height / 2;          //Set y position to be the center 
-    xSpeed[i] = random(-5, 5);  //Set speed of x and y to be random
+    x[i] = width / 2;             //Set x position to be the center
+    y[i] = height / 2;            //Set y position to be the center 
+    xSpeed[i] = random(-5, 5);    //Set speed of x and y to be random
     ySpeed[i] = random(5, -5);
-    size[i] = random(10, 50); Set the ball size to be random
-    r[i] = random(0, 256); //Set colors to randomly generate 
+    size[i] = random(10, 50);    //Set the ball size to be random
+    r[i] = random(0, 256);       //Set colors to randomly generate 
     g[i] = random(0, 256);
     b[i] = random(0, 256);
   }
@@ -42,12 +42,12 @@ function draw()
 
         if (y[i] < 0 || y[i] > height) 
         {
-        ySpeed[i] *= -1; ///If ball touches top or bottom sides, reverse the direction
+          ySpeed[i] *= -1; ///If ball touches top or bottom sides, reverse the direction
         }
       
       fill(r[i], g[i], b[i]); //Fills the r, g, b arrays with random color values 
 
-      noStroke(ellipse(x[i], y[i], size[i], size[i]));
+      noStroke(ellipse(x[i], y[i], size[i], size[i])); //noStroke() to remove the ellipses default black outline 
   }
 }
    
